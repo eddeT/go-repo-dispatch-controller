@@ -8,3 +8,9 @@ Keep your github bearer token to the repo you want to trigger\
 in the bearer.token file. Support for only one repo atm. 
 
 To be improved.
+
+## Example usage
+
+```go
+.\dispatch-controller.exe -userName eddeT -eventType book_test -repoName book-feelgood
+```
