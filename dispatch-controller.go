@@ -19,6 +19,10 @@ func getBerarer() string {
 	return string(bearer)
 }
 
+type Dispatch struct {
+	EventType string `json:"event_type"`
+}
+
 type UserInput struct {
 	UserName  string
 	RepoName  string
@@ -92,8 +96,4 @@ func main() {
 	fmt.Println(res)
 	fmt.Println(string(body))
 
-}
-
-type Dispatch struct {
-	EventType string `json:"event_type"`
 }
