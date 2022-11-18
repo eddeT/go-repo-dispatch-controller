@@ -11,6 +11,6 @@ To be improved.
 
 ## Example usage
 
-```go
+```ps1
 .\dispatch-controller.exe -userName eddeT -eventType book_test -repoName book-feelgood
 ```
