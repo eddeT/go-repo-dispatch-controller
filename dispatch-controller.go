@@ -16,6 +16,7 @@ func getBerarer() string {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println("Bearer: ", string(bearer))
 	return string(bearer)
 }
 
