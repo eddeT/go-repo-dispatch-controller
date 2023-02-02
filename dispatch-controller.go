@@ -86,6 +86,7 @@ func main() {
 	req.Header.Add("Authorization", "Bearer "+bearer)
 
 	res, err := http.DefaultClient.Do(req)
+	fmt.Println(res)
 	if err != nil {
 		log.Fatal("Could not make POST request")
 	}
