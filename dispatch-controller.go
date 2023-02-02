@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 func getBerarer() string {
@@ -16,8 +17,10 @@ func getBerarer() string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Bearer: ", string(bearer))
-	return string(bearer)
+	cleanup := strings.Replace(string(bearer), "\r", "", -1)
+	cleanup = strings.Replace(string(bearer), "\n", "", -1)
+	fmt.Println("Bearer: ", string(cleanup))
+	return cleanup
 }
 
 type Dispatch struct {
