@@ -20,8 +20,7 @@ func getBerarer() string {
 		panic(err)
 	}
 	exPath := filepath.Dir(ex)
-	fmt.Println(exPath)
-	bearer, err := os.ReadFile("bearer.token")
+	bearer, err := os.ReadFile(exPath + "/bearer.token")
 	if err != nil {
 		log.Fatal(err)
 	}
