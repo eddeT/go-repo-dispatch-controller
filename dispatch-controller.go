@@ -9,10 +9,18 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
 func getBerarer() string {
+
+	ex, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	exPath := filepath.Dir(ex)
+	fmt.Println(exPath)
 	bearer, err := os.ReadFile("bearer.token")
 	if err != nil {
 		log.Fatal(err)
