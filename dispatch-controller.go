@@ -81,7 +81,6 @@ func main() {
 
 	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(dispatchJSON))
 
-	req.Header.Add("Accept", "application/vnd.github.everest-preview+json")
 	req.Header.Add("Content-Type", "application/json")
 	req.Header.Add("Authorization", "Bearer "+bearer)
 
@@ -94,7 +93,6 @@ func main() {
 	defer res.Body.Close()
 	body, _ := ioutil.ReadAll(res.Body)
 
-	fmt.Println(res)
 	fmt.Println(string(body))
 
 }
